@@ -32,7 +32,7 @@ fun NoteItem(
     cornerSize: Dp =  30.dp,
     onDeleteClick: () ->  Unit,
 ) {
-    Box (modifier = Modifier) {
+    Box (modifier = modifier) {
         Canvas(modifier = Modifier.matchParentSize()) {
             val clipPath = Path().apply {
                 lineTo(size.width - cornerSize.toPx(), 0f)
@@ -84,7 +84,8 @@ fun NoteItem(
         ) {
             Icon(
                 imageVector = Icons.Default.Delete,
-                contentDescription = "Delete Note"
+                contentDescription = "Delete Note",
+                tint = MaterialTheme.colors.onSurface
             )
         }
     }

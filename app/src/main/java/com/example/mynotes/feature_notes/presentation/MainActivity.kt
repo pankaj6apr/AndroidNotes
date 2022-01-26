@@ -35,7 +35,7 @@ import dagger.hilt.android.AndroidEntryPoint
                         }
                         composable(
                             route = Screen.AddEditNoteScreen.route +
-                            "?noteId={noteId}&noteColor={noteColor",
+                            "?noteId={noteId}&noteColor={noteColor}",
                             arguments = listOf(
                                 navArgument(
                                     name = "noteId"
