@@ -31,7 +31,7 @@ fun OrderSection(
                 text = "Date",
                 selected = noteOrder is NoteOrder.Date,
                 onSelect = {
-                    onOrderChange(NoteOrder.Title(noteOrder.orderType))
+                    onOrderChange(NoteOrder.Date(noteOrder.orderType))
                 }
             )
             Spacer(modifier = Modifier.width((8.dp)))
@@ -39,7 +39,7 @@ fun OrderSection(
                 text = "Color",
                 selected = noteOrder is NoteOrder.Color,
                 onSelect = {
-                    onOrderChange(NoteOrder.Title(noteOrder.orderType))
+                    onOrderChange(NoteOrder.Color(noteOrder.orderType))
                 }
             )
         }
